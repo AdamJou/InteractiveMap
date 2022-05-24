@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mapa - png</title>
+		
+        <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function() {
+                $("area").hover(function() {
+                    var href=$(this).attr("href");
+                    $(href).stop();
+                    $(href).fadeIn("fast");
+                }, function() {
+                    var href=$(this).attr("href");
+                    $(href).stop();
+                    $(href).fadeOut("fast");
+                });
+            });
+        </script>
+		
+        <style type="text/css">
+
+*{
+background-color: #BDBFAE;
+}
+
+            #area{
+                width:873px;
+                height: 697px;
+                position: relative;
+            }
+            #map_powiaty{
+                position: absolute;top:0;left:0;
+                z-index: 1;
+            }
+            #area li{
+                position: absolute;top:0;left:0;
+                z-index: 1;
+                display: none;
+	background:transparent;
+            }
+        </style>
+<style>
+			.tooltip {
+			  position: absolute;
+			  display: inline-block;
+			top:0;
+			right: 0;
+		
+			}
+
+			.tooltip .tooltiptext {
+			  visibility: hidden;
+			  width: 300px;
+			  background-color: #F2E205;
+			  color:black;
+			  text-align: center;
+			
+			 box-shadow: 10px 10px #D7F205;
+			  padding: 5px;
+			display: block;
+			 z-index: 1;
+			 position: absolute;
+			
+
+			}
+.tooltip .tooltiptext b,img {
+background:transparent;
+		}	
+
+			
+		
+			.tooltip:hover .tooltiptext {
+			  visibility: visible;
+			}
+		</style>
+	
+    </head>
+	  
+    <body>
+		<script type="text/javascript">
+          function openLink(url){
+			window.open(url, '_blank').focus();
+			}
+        </script>
+        <div id="area">
+            <img id="map_powiaty" usemap="#powiaty" src="img/powiaty.png" />
+            <ul>
+                <li id="opoczno"><img src="img/opoczno.png" usemap="#powiaty" /></li>
+                <li id="kutno"><img src="img/kutno.png" usemap="#powiaty" /></li>
+                <li id="leczyca"><img src="img/leczyca.png" usemap="#powiaty" /></li>
+	            <li id="zg"><img src="img/zg.png" usemap="#powiaty" /></li>
+                <li id="lowicz"><img src="img/lowicz.png" usemap="#powiaty" /></li>
+                <li id="poddebica"><img src="img/poddebica.png" usemap="#powiaty" /></li>	
+                <li id="skierniewice"><img src="skierniewice.png" usemap="#powiaty" /></li>	
+                <li id="lodz"><img src="img/lodz.png" usemap="#powiaty" /></li>	
+                <li id="brzeziny"><img src="img/brzeziny.png" usemap="#powiaty" /></li>
+                <li id="rawa"><img src="img/rawa.png" usemap="#powiaty" /></li>
+                <li id="pab"><img src="img/pab.png" usemap="#powiaty" /></li>	
+                <li id="etm"><img src="img/etm.png" usemap="#powiaty" /></li>	
+                <li id="zdunska"><img src="img/zdunska.png" usemap="#powiaty" /></li>
+                <li id="lask"><img src="img/lask.png" usemap="#powiaty" /></li>	
+                <li id="ptb"><img src="img/ptb.png" usemap="#powiaty" /></li>
+                <li id="ebe"><img src="img/ebe.png" usemap="#powiaty" /></li>	
+                <li id="sieradz"><img src="img/sieradz.png" usemap="#powiaty" /></li>
+                <li id="wie"><img src="img/wie.png" usemap="#powiaty" /></li>	
+                <li id="wielun"><img src="img/wielun.png" usemap="#powiaty" /></li>
+                <li id="rad"><img src="img/rad.png" usemap="#powiaty" /></li>	
+                <li id="paje"><img src="img/paje.png" usemap="#powiaty" /></li>
+
+
+				
+            </ul>
+            <map id="powiaty" name="powiaty" >
+             <div class="tooltip">
+    <area target="_blank" alt="kutno" title="Kutnowski" href="#kutno"  onclick="openLink(' https://www.szpital.kutno.pl/')"
+
+coords="288,84,309,95,327,99,337,101,350,122,361,125,375,119,395,119,416,122,433,119,446,112,449,93,461,77,456,63,438,63,425,58,416,51,394,42,385,34,378,28,367,26,345,22,341,15,335,8,323,11,317,18,307,28,292,28,280,28,267,35,263,45,266,55" shape="poly">
+<span class="tooltiptext">
+<b>Kutnowski</b><br><br>
+Powierzchnia w km2: 887<br><br>
+Ludność:97295<br>
+Mężczyźni: 46781<br>
+Kobiety: 50514 <br>
+na 1km2: 110 <br><br>
+Współczynnik feminizacji: 108<br>
+				
+</span>
+</div>
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="leczyca" title="Łęczycki" href="#leczyca"  onclick="openLink(' https://www.zozleczyca.pl/')"coords="264,92,293,92,312,98,324,102,341,112,350,124,367,124,391,120,397,142,398,160,386,171,375,169,361,170,352,168,321,166,287,171,257,172,245,169,231,169,219,174,217,161,213,152,240,120,231,110,235,95,250,87,258,86" shape="poly">
+<span class="tooltiptext">
+<b>Łęczycki</b><br><br>
+Powierzchnia w km2 : 773<br><br>
+Ludność: 50143<br>
+Mężczyźni: 24375<br>
+Kobiety: 25768 <br>
+na 1km2: 65 <br><br>
+Współczynnik feminizacji: 106<br>
+				
+</span>
+</div>
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="zgierz" title="Zgierski" href="#zg" 
+ onclick="openLink('http://szpital.zgierz.pl')"
+coords="302,213,289,204,290,184,317,168,345,171,359,174,382,179,396,172,419,166,453,164,451,171,481,190,473,202,445,205,442,217,447,227,437,237,423,236,411,244,391,239,379,242,366,248,353,249,341,258,343,267,333,271,313,264,297,252" shape="poly">
+<span class="tooltiptext">
+<b>Zgierski</b><br><br>
+Powierzchnia w km2: 855<br><br>
+Ludność: 165916<br>
+Mężczyźni: 78758<br>
+Kobiety: 87158 <br>
+na 1km2: 194 <br><br>
+Współczynnik feminizacji: 111<br>
+</span>
+</div>
+				
+
+
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="lowicz" title="Łowicki" href="#lowicz" 
+onclick="openLink(' https://www.powiat.lowicz.pl')"
+coords="406,157,401,133,401,122,425,125,452,103,459,85,469,72,473,59,482,54,497,47,513,53,530,61,543,67,545,90,551,111,553,129,550,143,549,161,539,171,519,175,505,183,497,195,500,205,491,207,481,188,457,168,447,160,421,163" shape="poly">
+<span class="tooltiptext">
+<b>Łowicki</b><br><br>
+Powierzchnia w km2: 988<br><br>
+Ludność: 78616<br>
+Mężczyźni: 8059<br>
+Kobiety: 40557 <br>
+na 1km2: 80 <br><br>
+Współczynnik feminizacji: 10<br>
+</span>
+</div>
+
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="poddebica" title="Poddębicki" href="#poddebica" 
+onclick="openLink('https://www.poddebicki.pl/')"
+coords="174,150,205,155,216,176,244,172,273,177,284,196,286,214,300,217,295,230,289,244,276,254,256,254,247,257,258,276,237,284,223,285,208,294,193,285,177,286,161,286,188,214" shape="poly">
+<span class="tooltiptext">
+<b>Poddębicki</b><br><br>
+Powierzchnia w km2: 881<br><br>
+Ludność: 41205<br>
+Mężczyźni: 20391<br>
+Kobiety: 20814 <br>
+na 1km2: 47<br><br>
+Współczynnik feminizacji: 102<br>
+</span>
+</div>
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="skierniewice" title="Skierniewicki" href="#skierniewice" 
+onclick="openLink(' https://www.szpitalskierniewice.pl')"
+coords="537,182,557,160,558,132,559,118,588,125,589,148,585,168,597,185,593,198,611,210,629,212,650,211,659,223,643,235,612,237,590,236,564,245,563,254,577,268,572,282,553,282,536,275,527,259,523,246,506,236,499,218,503,210,514,185" shape="poly">
+<span class="tooltiptext">
+<b>Skierniewicki</b><br><br>
+Powierzchnia w km2: 361235<br><br>
+Ludność: 175324<br>
+Mężczyźni: 175324<br>
+Kobiety: 185911<br>
+na 1km2: 88<br><br>
+Współczynnik feminizacji: 106<br>
+</span>
+</div>
+
+ <div class="tooltip">
+    <area target="_blank" alt="wschodnio" title="Łódzki Wschodni" href="#lodz" 
+onclick="openLink(' https://www.lodzkiwschodni.pl')"
+
+coords="411,258,426,243,438,260,436,279,445,288,495,279,507,281,502,290,516,292,521,291,510,316,500,324,493,309,478,307,457,308,452,331,436,335,425,339,423,349,420,358,423,375,421,390,405,390,396,385,387,379,384,363,381,355,373,341,375,322,394,314,406,308,422,309,428,290,424,272,421,260" shape="poly">
+<span class="tooltiptext">
+<b>Łódźki Wschodni</b><br><br>
+Powierzchnia w km2: 500<br><br>
+Ludność: 71705<br>
+Mężczyźni: 34420<br>
+Kobiety: 37285<br>
+na 1km2: 143<br><br>
+Współczynnik feminizacji: 108<br>
+</span>
+</div>
+
+
+
+ <div class="tooltip">
+    <area target="_blank" alt="brzeziny" title="Brzeziny" href="#brzeziny" 
+
+onclick="openLink(' https://www.szpital-brzeziny.pl/')"
+
+coords="443,240,449,226,453,211,475,204,497,233,521,251,526,270,526,282,509,284,501,273,487,274,446,282,438,282" shape="poly">
+<span class="tooltiptext">
+<b>Brzeziny</b><br><br>
+Powierzchnia w km2: 359<br><br>
+Ludność: 30890<br>
+Mężczyźni: 15013<br>
+Kobiety: 15877<br>
+na 1km2: 86<br><br>
+Współczynnik feminizacji: 106<br>
+</span>
+</div>
+
+ <div class="tooltip">
+    <area target="_blank" alt="rawa" title="Rawski" href="#rawa" 
+
+onclick="openLink(' https://www.powiatrawski.pl')"
+coords="581,266,567,254,581,245,603,242,622,242,629,240,649,240,662,236,670,228,693,241,695,250,683,257,691,284,709,297,709,310,703,322,680,317,656,311,635,321,633,330,613,325,605,310,591,303,578,302,569,298" shape="poly">
+<span class="tooltiptext">
+<b>Rawski</b><br><br>
+Powierzchnia w km2: 646<br><br>
+Ludność: 48808<br>
+Mężczyźni: 24067<br>
+Kobiety: 24741<br>
+na 1km2: 76<br><br>
+Współczynnik feminizacji: 103<br>
+</span>
+</div>
+
+ <div class="tooltip">
+
+
+
+    <area target="_blank" alt="pabianice" title="Pabianicki" href="#pab" 
+onclick="openLink(' http://www.pcmnzoz.pl')"
+coords="264,276,254,262,286,256,319,270,342,278,349,296,361,313,369,326,368,342,377,363,378,380,356,389,337,385,327,374,312,363,299,337,305,320,303,304" shape="poly">
+<span class="tooltiptext">
+<b>Pabianicki</b><br><br>
+Powierzchnia w km2: 492<br><br>
+Ludność: 119289<br>
+Mężczyźni: 56039<br>
+Kobiety: 63250<br>
+na 1km2: 242<br><br>
+Współczynnik feminizacji: 113<br>
+</span>
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="tomaszow" title="Tomaszowski" href="#etm" 
+onclick="openLink(' https://szpitalwtomaszowie.pl')"
+
+coords="504,319,522,299,533,283,563,301,591,304,605,317,609,325,624,331,646,339,645,356,631,367,618,368,609,384,598,395,583,403,578,411,561,415,546,415,535,423,523,423,515,410,504,396,498,388,500,379,492,367,484,361,476,378,465,368,456,363,450,346,457,317,464,312,480,311" shape="poly">
+<span class="tooltiptext">
+<b>Tomaszowski</b><br><br>
+Powierzchnia w km2: 1025<br><br>
+Ludność: 117259<br>
+Mężczyźni: 56219<br>
+Kobiety: 61040<br>
+na 1km2: 114<br><br>
+Współczynnik feminizacji: 109<br>
+</span>
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="zdunska" title="Zduńskowolski" href="#zdunska" 
+onclick="openLink('http://www.powiatzdunskowolski.pl')"
+
+coords="261,285,275,305,269,316,258,323,255,331,261,356,250,371,239,385,233,406,221,409,214,393,207,381,202,375,216,360,220,347,215,337,209,331,200,329,197,319,209,311,211,299,225,291,231,289" shape="poly">
+<span class="tooltiptext">
+<b>Zduńskowolski</b><br><br>
+Powierzchnia w km2: 369<br><br>
+Ludność: 66766<br>
+Mężczyźni: 32290<br>
+Kobiety: 34476<br>
+na 1km2: 181<br><br>
+Współczynnik feminizacji: 107<br>
+</span>
+</div>
+
+
+<div class="tooltip">
+    <area target="_blank" alt="lask" title="Łaski" href="#lask" 
+onclick="openLink('https://lask.com.pl')"
+
+coords="269,289,283,294,297,305,301,319,295,329,300,346,303,364,316,375,322,381,312,399,291,407,273,412,269,423,263,436,266,455,257,463,232,461,217,450,205,437,221,414,233,411,247,383,265,361,259,334,277,315,281,309" shape="poly">
+<span class="tooltiptext">
+<b>Łaski</b><br><br>
+Powierzchnia w km2: 618<br><br>
+Ludność: 50103<br>
+Mężczyźni: 24387<br>
+Kobiety: 25716<br>
+na 1km2: 81<br><br>
+Współczynnik feminizacji: 105<br>
+</span>
+</div>
+
+<div class="tooltip">
+    <area shape="poly" alt="opoczno" title="OPOCZYŃSKI"  href="#opoczno"  onclick="openLink(' https://szpitalopoczno.pl/')"
+
+
+
+coords="571,415,589,410,599,400,609,392,617,379,629,372,643,366,651,359,657,380,659,393,671,394,677,397,670,409,664,426,662,434,653,439,649,457,649,464,637,474,639,488,635,505,625,505,619,506,609,508,603,519,604,526,598,528,581,531,569,534,560,533,543,531,535,524,546,511,534,477,529,467,517,463,502,451,497,446,515,432,539,427,545,419" shape="poly">
+<span class="tooltiptext">
+<b>OPOCZYŃSKI</b><br><br>
+Powierzchnia w km2: 1040<br><br>
+Ludność: 76623(w tym ja)<br>
+Mężczyźni: 37920<br>
+Kobiety: 38703<br>
+na 1km2: 74<br><br>
+Współczynnik feminizacji: 102<br>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/POL_Opoczno_COA.svg/235px-POL_Opoczno_COA.svg.png" weight:"100px" height:"100px">
+
+
+</span>
+
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="piotrkow" title="Piotrkowski" href="#ptb" 
+onclick="openLink('https://szpital-piotrkow.pl/')"
+
+coords="444,342,456,364,467,379,481,378,486,364,493,378,491,388,506,400,519,418,508,432,494,442,506,458,525,468,542,507,536,520,530,530,516,531,505,544,502,568,480,561,465,554,453,542,444,546,439,550,425,552,411,535,404,515,393,500,385,493,388,465,389,453,386,441,388,431,384,422,378,412,376,397,380,388,400,392,418,396,425,382,424,361,427,356,425,346,435,340" shape="poly">
+<span class="tooltiptext">
+<b>Piotrkowski</b><br><br>
+Powierzchnia w km2: 5972<br><br>
+Ludność: 585179<br>
+Mężczyźni: 284471<br>
+Kobiety: 300708<br>
+na 1km2: 98<br><br>
+Współczynnik feminizacji: 106<br>
+
+</span>
+
+</div>
+
+
+
+<div class="tooltip">
+    <area target="_blank" alt="belchatow" title="Bełchatowski" href="#ebe" 
+
+onclick="openLink('https://szpital-belchatow.pl')"
+coords="342,535,357,532,360,514,377,502,382,477,390,461,383,450,380,439,382,424,369,416,371,405,370,392,349,391,326,386,314,407,294,409,276,414,268,432,270,454,264,466,239,463,225,460,218,470,217,488,256,496,273,491,276,510,284,513,295,507,304,515,317,531" shape="poly">
+<span class="tooltiptext">
+<b>Bełchatowski</b><br><br>
+Powierzchnia w km2: 968<br><br>
+Ludność: 112997<br>
+Mężczyźni: 55334<br>
+Kobiety: 57663<br>
+na 1km2: 117<br><br>
+Współczynnik feminizacji: 104<br>
+
+</span>
+
+</div>
+
+
+<div class="tooltip">
+    <area target="_blank" alt="sieradz" title="Sieradzki" href="#sieradz" 
+
+onclick="openLink('http://www.spzozsieradz.pl')"
+
+coords="173,287,189,287,203,298,197,316,201,331,211,338,207,362,199,364,203,384,211,409,209,422,197,434,189,441,187,460,164,464,143,455,121,452,108,445,73,446,65,438,89,408,86,394,87,367,86,350,86,333,90,312,97,298,100,285,105,266,117,253,130,250,153,255,158,259,155,281" shape="poly">
+<span class="tooltiptext">
+<b>Sieradzki</b><br><br>
+Powierzchnia w km2: 5666<br><br>
+Ludność: 446823<br>
+Mężczyźni: 218806<br>
+Kobiety: 228017<br>
+na 1km2: 79<br><br>
+Współczynnik feminizacji: 104<br>
+
+</span>
+
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="Wieruszowski" title="wieruszowki" href="#wie" 
+
+onclick="openLink('https://www.powiat-wieruszowski.pl/')"
+coords="104,480,115,471,123,458,107,448,80,448,61,450,59,436,39,424,36,439,33,448,16,455,1,464,8,493,22,500,29,519,21,536,20,549,36,554,49,560,57,566,67,566,72,510,87,478" shape="poly">
+<span class="tooltiptext">
+<b>Wieruszowski</b><br><br>
+Powierzchnia w km2: 577<br><br>
+Ludność: 42213<br>
+Mężczyźni: 20917<br>
+Kobiety: 21296<br>
+na 1km2: 73<br><br>
+Współczynnik feminizacji: 102<br>
+
+</span>
+
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="wielun" title="Wieluński" href="#wielun" 
+
+onclick="openLink('https://www.szpital-wielun.pl')"
+
+coords="105,487,115,476,129,458,161,464,181,466,193,444,216,452,213,474,213,495,202,506,190,510,192,532,199,540,190,548,181,564,183,576,187,583,180,596,154,602,132,582,155,604,131,570,114,564,111,578,101,574,75,571,75,552,79,501,91,484" shape="poly">
+<span class="tooltiptext">
+<b>Wieruszowski</b><br><br>
+Powierzchnia w km2: 926<br><br>
+Ludność: 76699<br>
+Mężczyźni: 37618<br>
+Kobiety: 39081<br>
+na 1km2: 83<br><br>
+Współczynnik feminizacji: 104<br>
+
+</span>
+
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="pajeczno" title="Pajęczański" href="#paje" 
+
+onclick="openLink('https://www.powiatpajeczno.pl/asp/pl_licznik.asp')"
+
+coords="201,538,196,521,215,501,241,496,268,496,279,512,295,515,312,529,329,539,333,543,313,550,319,560,325,566,315,582,310,598,319,608,321,617,317,624,294,625,271,611,256,608,225,592,189,594,189,579,188,570,190,554" shape="poly">
+<span class="tooltiptext">
+<b>Pajęczański</b><br><br>
+Powierzchnia w km2: 804<br><br>
+Ludność: 51597<br>
+Mężczyźni: 25516<br>
+Kobiety: 26081<br>
+na 1km2: 64<br><br>
+Współczynnik feminizacji: 102<br>
+
+</span>
+
+</div>
+
+<div class="tooltip">
+    <area target="_blank" alt="radomsko" title="Radomszczański" href="#rad" 
+
+onclick="openLink('http://999.szpital.biz.pl')"
+
+coords="343,606,315,602,325,576,322,561,323,547,345,544,355,538,377,503,398,517,407,543,411,554,434,550,445,546,463,560,488,566,503,571,515,538,535,542,532,562,531,584,551,599,541,634,499,587,490,619,465,679,451,694,390,676" shape="poly">
+<span class="tooltiptext">
+<b>Radomszczański</b><br><br>
+Powierzchnia w km2: 1443<br><br>
+Ludność: 113315<br>
+Mężczyźni: 55516<br>
+Kobiety: 57799<br>
+na 1km2: 79<br><br>
+Współczynnik feminizacji: 104<br>
+
+</span>
+
+</div>
+
+
+</map>
+        </div>
+    </body>
+</html>
